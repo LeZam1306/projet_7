@@ -1,0 +1,26 @@
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    padding: 2rem 0 2rem 0;
+    
+    &__logo img{
+        height: 3rem;
+        width: auto;
+    }
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem; 
+    }
+    &__link{
+        font-size: 18px;
+        
+        &--active{
+            text-decoration: underline;
+        }
+    }
+}
