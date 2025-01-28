@@ -1,0 +1,13 @@
+.card-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 colonnes de taille égale
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    background-color: #F6F6F6;
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
