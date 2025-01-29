@@ -1,0 +1,15 @@
+.about-section{
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    margin-bottom: 2rem;
+
+    details{
+        width: 80%;
+    }
+}

@@ -1,0 +1,23 @@
+.no-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 7rem;
+    
+    h1{
+        color: #FF6060;
+        font-size: 288px;
+        font-weight: 700;
+    }
+    h2{
+        color: #FF6060;
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+    a{
+        text-decoration: underline;
+    }
+}

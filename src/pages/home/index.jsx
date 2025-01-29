@@ -28,7 +28,7 @@ const Home = () => {
         }
     })
     return <>
-        <Hero urlImg={imgHero} title="Chez vous, partout et ailleurs"/>
+        <Hero urlImg={imgHero} title="Chez vous, partout et ailleurs" lowBrightness={true}/>
         <CardSection cardsInfos={cardsData} />
     </>
 }
