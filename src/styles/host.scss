@@ -1,0 +1,23 @@
+.host{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+
+    img{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        color: #FF6060;
+        word-wrap: break-word;
+        width: 4rem;
+        text-align: end;
+    }
+
+}

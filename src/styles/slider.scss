@@ -1,0 +1,33 @@
+.slider{
+    max-width: 1240px;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    height: 415px;
+    &__img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__leftArrow, &__rightArrow, &__count{
+        position: absolute;
+        color: white;
+    }
+    &__leftArrow, &__rightArrow{
+        font-size: 56px;
+        top: 44%
+    }
+    &__leftArrow{
+        left: 2rem;
+    }
+    &__rightArrow{
+        right: 2rem;
+    }
+    &__count{
+        bottom: 2rem;
+        left: 49%;
+    }
+
+}
