@@ -4,6 +4,11 @@
     overflow: hidden;
     cursor: pointer;
     aspect-ratio: 1;
+    @media (max-width: 768px) {
+        aspect-ratio: 0;
+        height: 255px;    
+    }
+
 
     &__img{
         object-fit: cover;

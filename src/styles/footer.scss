@@ -6,11 +6,20 @@
     max-height: 209px;
     padding: 3rem 0 1rem 0;
 
+    @media (max-width: 768px) {
+        height: 209px;
+        padding: 2.5rem 0 2.5rem;
+    }
+
     &__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
     & img{
         max-height: 40px;
@@ -19,5 +28,9 @@
     }
     & p{
         color: white;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }

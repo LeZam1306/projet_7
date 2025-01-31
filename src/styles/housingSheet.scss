@@ -6,21 +6,35 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1.5rem;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
     &__house{
         .title{
             color: #FF6060;
             font-size: 36px;
             font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
         }
         .location{
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 1rem;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
         ul{
             display: flex;
             flex-direction: row;
             gap: 1rem;
+            flex-wrap: wrap;
             .tag{
                 display: flex;
                 flex-direction: column;
@@ -33,13 +47,27 @@
                 font-weight: 700;
                 height: 25px;
                 padding: 0 0.5rem 0 0.5rem;
+                min-width: 84px;
             }
+        }
+
+        @media (max-width: 768px) {
+            margin-right: 1rem;
+            margin-left: 1rem;
         }
     }
     &__host{
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     }
 }
 .presentation-feature{
@@ -51,7 +79,17 @@
     justify-content: space-between;
     margin-bottom: 2rem;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .drop-down{
         width: 47%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 }

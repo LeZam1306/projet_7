@@ -6,6 +6,13 @@
     position: relative;
     margin-bottom: 2rem;
     height: 415px;
+    
+    @media (max-width: 768px) {
+        height: 255px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
     &__img{
         height: 100%;
         object-fit: cover;
@@ -17,17 +24,33 @@
     }
     &__leftArrow, &__rightArrow{
         font-size: 56px;
-        top: 44%
+        top: 44%;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
     &__leftArrow{
         left: 2rem;
+
+        @media (max-width: 768px) {
+            left: 1rem;
+        }
     }
     &__rightArrow{
         right: 2rem;
+
+        @media (max-width: 768px) {
+            right: 1rem;
+        }
     }
     &__count{
         bottom: 2rem;
         left: 49%;
+
+        @media (max-width: 768px) {
+            visibility: hidden;
+        }
     }
 
 }

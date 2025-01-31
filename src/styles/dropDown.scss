@@ -17,6 +17,10 @@
         padding-left: 1rem;
         z-index: 2;
 
+        @media (max-width: 768px) {
+            height: 40px;
+            font-size: 16px;
+        }
         &::before {
             content: "\f077";
             font-family: "Font Awesome 6 Free";
@@ -28,6 +32,11 @@
             font-size: 22px;
             transition: transform 0.3s ease;
             transform-origin: center;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                top: 29%;
+            }
         }
     }
     &[open] summary::before {

@@ -5,19 +5,35 @@
     align-items: center;
     gap: 3rem;
     margin-bottom: 7rem;
-    
+
+    @media (max-width: 768px) {
+        margin-top: 2rem;
+    }
     h1{
         color: #FF6060;
         font-size: 288px;
         font-weight: 700;
+
+        @media (max-width: 768px) {
+            font-size: 96px;
+        }
     }
     h2{
         color: #FF6060;
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 4rem;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            width: 80%;
+            text-align: center;
+        }
     }
     a{
         text-decoration: underline;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 }
