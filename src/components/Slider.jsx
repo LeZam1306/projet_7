@@ -2,6 +2,7 @@ import "../styles/slider.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
+import PropTypes from "prop-types"
 
 const Slider = ({pictures}) => {
 
@@ -21,9 +22,14 @@ const Slider = ({pictures}) => {
 
     return <section className="slider">
         <img src={pictures[count]} className="slider__img"/>
-        <p className="slider__count">{count + 1}/{pictures.length}</p>
-        <FontAwesomeIcon onClick={() => handleClick(false)} icon={faChevronLeft} className="slider__leftArrow"/>
-        <FontAwesomeIcon onClick={() => handleClick(true)} icon={faChevronRight} className="slider__rightArrow"/>
+        {pictures.length > 1 && <p className="slider__count">{count + 1}/{pictures.length}</p>}
+        {pictures.length > 1 && <FontAwesomeIcon onClick={() => handleClick(false)} icon={faChevronLeft} className="slider__leftArrow"/>}
+        {pictures.length > 1 && <FontAwesomeIcon onClick={() => handleClick(true)} icon={faChevronRight} className="slider__rightArrow"/>}
     </section>
 }
+
 export default Slider
+
+Slider.prototype = {
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired
+}

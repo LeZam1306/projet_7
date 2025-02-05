@@ -11,17 +11,27 @@ function HousingSheet(){
 
     const { id } = useParams()
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+
     useEffect(() => {
         const fetchData = async () => {
-            let allData = await housingRequest()
-            let foundItem = allData.find(item => item.id == id)
-            setData(foundItem)
+            try{
+                let allData = await housingRequest()
+                let foundItem = Array.isArray(allData) ? allData.find(item => item.id == id) : []
+                setData(foundItem)
+            }catch(err){
+                setError("Chargement impossible")
+            }finally {
+                setLoading(false)
+            }
         }
         fetchData()
-    },[id])
-    while (data.length == 0){
-        return <div>Loading...</div>
-    }
+    },[])
+
+    if (loading) return <div>Chargement...</div>
+    if (error) return <p>{error}</p>
+    if (data == undefined) return <p>Aucun logement trouvé</p>
     return <>
         <Slider pictures={data.pictures} />
 

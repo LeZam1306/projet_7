@@ -7,26 +7,33 @@ import { useEffect, useState } from "react"
 
 const Home = () => {
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
+
     useEffect(() => {
-            try{
-                const fetchData = async () => {
-                    setData(await housingRequest())
-                }
-                fetchData()
-            }catch(error){
-                console.log("erreur")
+        const fetchData = async () => {
+            try {
+                setData(await housingRequest());
+            }catch (err) {
+                setError("Chargement impossible")
+            }finally {
+                setLoading(false)
             }
+        };
+        fetchData();
     }, [])
-    while (data.length === 0) {
-        return <div>Loading...</div>;
-    }
-    const cardsData = data.map(cardData => {
+    
+    const cardsData = Array.isArray(data) ? data.map(cardData => {
         return {
             id: cardData.id,
             cover : cardData.cover,
             title : cardData.title
         }
-    })
+    }) : []
+
+    if (loading) return <div>Chargement...</div>
+    if (error) return <p>{error}</p>
+
     return <>
         <Hero urlImg={imgHero} title="Chez vous, partout et ailleurs" lowBrightness={true}/>
         <CardSection cardsInfos={cardsData} />

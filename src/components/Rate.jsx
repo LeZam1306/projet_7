@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
+import PropTypes from "prop-types"
 import '../styles/rate.scss'
 
 const Rate = ({score}) => {
@@ -10,3 +11,7 @@ const Rate = ({score}) => {
     </div>
 }
 export default Rate
+
+Rate.prototype = {
+    score: PropTypes.number.isRequired
+}   

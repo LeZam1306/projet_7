@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom"
 import logo from "../assets/logo-color.png"
 import "../styles/navBar.scss"
+
 const NavBar = () => {
     return <header className="navBar">
         <div className="navBar__logo">

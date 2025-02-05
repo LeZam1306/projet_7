@@ -2,11 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import "./styles/global.scss"
-import Layout from "./components/Layout.jsx"
-import Home from './pages/home/index.jsx'
-import About from "./pages/about.jsx"
-import NoFound from './pages/noFound.jsx'
-import HousingSheet from './pages/housing-sheet.jsx'
+import Layout from "./components/Layout"
+import Home from './pages/home/Home'
+import About from "./pages/About"
+import NotFound from './pages/NotFound'
+import HousingSheet from './pages/HousingSheet'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
           <Route element={<Home />} path="/"/>
           <Route element={<About />} path="/A-propos"/>
           <Route element={<HousingSheet />} path="/housing/:id"/>
-          <Route element={<NoFound />} path="*"/>
+          <Route element={<NotFound />} path="*"/>
         </Route>
       </Routes>
     </Router>

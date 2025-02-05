@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import "../styles/host.scss"
 
 const Host = ({imgProfile, name}) => {
@@ -8,3 +9,8 @@ const Host = ({imgProfile, name}) => {
 }
 
 export default Host
+
+Host.prototype = {
+    imgProfile: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+}

@@ -1,5 +1,6 @@
 import Card from "./Card.jsx"
 import "../styles/cardSection.scss"
+import PropTypes from "prop-types"
 
 const CardSection = ({cardsInfos}) => {
     return <section className="card-section">
@@ -9,3 +10,11 @@ const CardSection = ({cardsInfos}) => {
     </section>
 }
 export default CardSection
+
+CardSection.protType = {
+    cardsInfos: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        cover : PropTypes.string.isRequired,
+        title : PropTypes.string.isRequired
+    })
+}

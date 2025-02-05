@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "../styles/card.scss"
+import PropTypes from "prop-types"
 
 const Card = ({urlImg, title, id}) => {
     return <Link to={`/housing/${id}`} className="card">
@@ -8,3 +9,9 @@ const Card = ({urlImg, title, id}) => {
     </Link>
 }
 export default Card
+
+Card.propTypes = {
+    urlImg: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
+}

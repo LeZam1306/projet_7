@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+
 const Hero = ({urlImg, title, lowBrightness}) => {
     return <div className="hero">
         <img className={lowBrightness ? "hero__img hero__img--filter" : "hero__img"} src={urlImg} />
@@ -5,3 +7,9 @@ const Hero = ({urlImg, title, lowBrightness}) => {
     </div>
 }
 export default Hero
+
+Hero.propTypes = {
+    urlImg: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    lowBrightness: PropTypes.bool
+}

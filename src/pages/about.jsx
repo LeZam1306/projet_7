@@ -7,16 +7,24 @@ import "../styles/aboutSection.scss"
 
 const About = () => {
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
-            setData(await aboutSectionRequest())
+            try{
+                setData(await aboutSectionRequest())
+            }catch(err){
+                setError["Chargement impossible"]
+            }finally{
+                setLoading(false)
+            }
         }
         fetchData()
     },[])
-    while (data.length === 0){
-        return <div>Loading...</div>
-    }
+
+    if (loading) return <div>Chargement...</div>
+    if (error) return <p>{error}</p>
     return <>
         <Hero urlImg={heroImg} />
         <section className="about-section">
