@@ -13,3 +13,7 @@ Hero.propTypes = {
     title: PropTypes.string,
     lowBrightness: PropTypes.bool
 }
+Hero.defaultProps = {
+    title: "",
+    lowBrightness: false
+}

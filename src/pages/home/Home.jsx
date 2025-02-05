@@ -16,6 +16,7 @@ const Home = () => {
                 setData(await housingRequest());
             }catch (err) {
                 setError("Chargement impossible")
+                console.log(err)
             }finally {
                 setLoading(false)
             }

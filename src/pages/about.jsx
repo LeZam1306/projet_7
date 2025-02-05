@@ -16,6 +16,7 @@ const About = () => {
                 setData(await aboutSectionRequest())
             }catch(err){
                 setError["Chargement impossible"]
+                console.log(err)
             }finally{
                 setLoading(false)
             }

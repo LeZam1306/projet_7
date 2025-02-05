@@ -22,12 +22,13 @@ function HousingSheet(){
                 setData(foundItem)
             }catch(err){
                 setError("Chargement impossible")
+                console.log(err)
             }finally {
                 setLoading(false)
             }
         }
         fetchData()
-    },[])
+    },[id])
 
     if (loading) return <div>Chargement...</div>
     if (error) return <p>{error}</p>

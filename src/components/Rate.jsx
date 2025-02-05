@@ -12,6 +12,6 @@ const Rate = ({score}) => {
 }
 export default Rate
 
-Rate.prototype = {
+Rate.propTypes = {
     score: PropTypes.number.isRequired
 }   

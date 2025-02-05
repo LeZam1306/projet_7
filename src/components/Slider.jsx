@@ -30,6 +30,6 @@ const Slider = ({pictures}) => {
 
 export default Slider
 
-Slider.prototype = {
+Slider.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired
 }

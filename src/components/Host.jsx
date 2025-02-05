@@ -10,7 +10,7 @@ const Host = ({imgProfile, name}) => {
 
 export default Host
 
-Host.prototype = {
+Host.propTypes = {
     imgProfile: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
 }
