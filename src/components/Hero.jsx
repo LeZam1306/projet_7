@@ -6,7 +6,6 @@ const Hero = ({urlImg, title, lowBrightness}) => {
         {title && <h2 className="hero__title">{title}</h2>}
     </div>
 }
-export default Hero
 
 Hero.propTypes = {
     urlImg: PropTypes.string.isRequired,
@@ -17,3 +16,5 @@ Hero.defaultProps = {
     title: "",
     lowBrightness: false
 }
+
+export default Hero

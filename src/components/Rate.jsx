@@ -10,8 +10,9 @@ const Rate = ({score}) => {
         })}
     </div>
 }
-export default Rate
 
 Rate.propTypes = {
     score: PropTypes.number.isRequired
-}   
+} 
+
+export default Rate

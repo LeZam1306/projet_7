@@ -8,9 +8,9 @@ const Host = ({imgProfile, name}) => {
     </aside>
 }
 
-export default Host
-
 Host.propTypes = {
     imgProfile: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
 }
+
+export default Host

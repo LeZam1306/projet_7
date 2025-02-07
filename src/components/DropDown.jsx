@@ -9,7 +9,6 @@ const DropDown = ({title, children}) => {
         </article>
     </details>
 }
-export default DropDown
 
 DropDown.propTypes = {
     title: PropTypes.string.isRequired,
@@ -18,3 +17,5 @@ DropDown.propTypes = {
         PropTypes.element
     ]).isRequired
 }
+
+export default DropDown

@@ -8,10 +8,11 @@ const Card = ({urlImg, title, id}) => {
         <h3 className="card__title">{title}</h3>
     </Link>
 }
-export default Card
 
 Card.propTypes = {
     urlImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired
 }
+
+export default Card

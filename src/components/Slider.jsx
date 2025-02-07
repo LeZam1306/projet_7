@@ -28,8 +28,8 @@ const Slider = ({pictures}) => {
     </section>
 }
 
-export default Slider
-
 Slider.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired
 }
+
+export default Slider

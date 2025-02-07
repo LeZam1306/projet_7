@@ -9,7 +9,6 @@ const CardSection = ({cardsInfos}) => {
         })}
     </section>
 }
-export default CardSection
 
 CardSection.propTypes = {
     cardsInfos: PropTypes.arrayOf(
@@ -20,3 +19,5 @@ CardSection.propTypes = {
       })
     ).isRequired
 }
+
+export default CardSection
